@@ -10,6 +10,12 @@ Surge, price coefficient service
 ## REST
 REST v1 Document ( [Postman](https://documenter.getpostman.com/view/909541/SzS1SoR5) )
 
+## Installation
+Docker compose
+```bash
+docker-compose up -d
+```
+
 ## Built With
 * [Nats](https://nats.io) - Used to message-based communication with pricing service
 * [Redis](https://redis.io) - Used to collect demands

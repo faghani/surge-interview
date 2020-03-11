@@ -1,0 +1,381 @@
+{
+	"info": {
+		"_postman_id": "c5e63f52-19b4-4ba5-9217-712a15ee3550",
+		"name": "Surge API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add demand",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lat\": 35.767204,\n    \"long\": 51.46704\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{base_url}}/v1/demand",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"v1",
+						"demand"
+					]
+				},
+				"description": "Add new demand to surge service"
+			},
+			"response": [
+				{
+					"name": "Add demand error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{base_url}}/v1/demand",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"demand"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 11 Mar 2020 21:51:03 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "17"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false\n}"
+				},
+				{
+					"name": "Add demand Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"lat\": 35.767204,\n    \"long\": 51.46704\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{base_url}}/v1/demand",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"demand"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 11 Mar 2020 21:50:09 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Setting new rules",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rules\": [\n        {\n            \"threshold\": 0,\n            \"coefficient\": 1\n        },\n        {\n            \"threshold\": 3,\n            \"coefficient\": 1.3\n        },\n        {\n            \"threshold\": 5,\n            \"coefficient\": 2\n        },\n        {\n            \"threshold\": 6,\n            \"coefficient\": 2.2\n        },\n        {\n            \"threshold\": 20,\n            \"coefficient\": 3\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{base_url}}/v1/rule",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"v1",
+						"rule"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Setting new rules Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rules\": [\n        {\n            \"threshold\": 0,\n            \"coefficient\": 1\n        },\n        {\n            \"threshold\": 3,\n            \"coefficient\": 1.3\n        },\n        {\n            \"threshold\": 5,\n            \"coefficient\": 2\n        },\n        {\n            \"threshold\": 6,\n            \"coefficient\": 2.2\n        },\n        {\n            \"threshold\": 20,\n            \"coefficient\": 3\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{base_url}}/v1/rule",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"rule"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 11 Mar 2020 21:53:03 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true\n}"
+				},
+				{
+					"name": "Setting new rules error",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{base_url}}/v1/rule",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"rule"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 11 Mar 2020 21:53:18 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "17"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "Health check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{base_url}}/v1/health",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"v1",
+						"health"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Health check 200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}/v1/health",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"health"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 11 Mar 2020 21:54:03 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Get OSM relation id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lat\": 35.767204,\n    \"long\": 51.46704\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{base_url}}/v1/osm-relation-id",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"v1",
+						"osm-relation-id"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get OSM relation id 200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"lat\": 35.767204,\n    \"long\": 51.46704\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{base_url}}/v1/osm-relation-id",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"v1",
+								"osm-relation-id"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 11 Mar 2020 21:56:07 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": {\n        \"success\": true\n    },\n    \"relation_id\": \"relation/6728863\"\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
